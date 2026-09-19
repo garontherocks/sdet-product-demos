@@ -1,6 +1,8 @@
 const response = await fetch('/api/products');
 const { products } = await response.json();
 const container = document.querySelector('#products');
+const renderDelay = new URLSearchParams(window.location.search).get('renderDelay');
+if (renderDelay) await new Promise((resolve) => setTimeout(resolve, Number(renderDelay)));
 for (const product of products) {
   const card = document.createElement('article');
   card.innerHTML = `<h3>${product.name}</h3><p>$${product.price}</p><button data-product="${product.id}">Buy now</button>`;
