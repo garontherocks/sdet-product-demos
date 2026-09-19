@@ -9,6 +9,8 @@
     "test:bootstrap": "playwright test tests/bootstrap.spec.ts",
     "test:rescue": "node scripts/run-rescue-demo.mjs",
     "validate:rescue": "node scripts/validate-rescue-metrics.mjs",
+    "test:migration": "playwright test tests/migration/migrated.spec.ts",
+    "validate:migration": "node scripts/validate-migration-demo.mjs",
     "metrics": "node scripts/summarize-metrics.mjs",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
