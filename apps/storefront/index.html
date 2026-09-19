@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quality Lab Store</title>
+    <style>
+      :root {
+        font-family: Inter, system-ui, sans-serif;
+        color: #162033;
+        background: #eef3f8;
+      }
+      body {
+        margin: 0;
+      }
+      header {
+        padding: 28px 7vw;
+        color: white;
+        background: #102a43;
+      }
+      main {
+        max-width: 920px;
+        margin: 40px auto;
+        padding: 0 24px;
+      }
+      .products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      article,
+      .receipt {
+        padding: 24px;
+        border-radius: 14px;
+        background: white;
+        box-shadow: 0 8px 26px #16324f18;
+      }
+      button {
+        border: 0;
+        border-radius: 8px;
+        padding: 12px 18px;
+        color: white;
+        background: #087e8b;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .receipt {
+        margin-top: 24px;
+        border-left: 6px solid #20a36a;
+      }
+      [hidden] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Quality Lab Store</h1>
+      <p>A deterministic storefront for public SDET demos.</p>
+    </header>
+    <main>
+      <h2>Choose a service</h2>
+      <section id="products" class="products" aria-label="Products"></section>
+      <section id="receipt" class="receipt" aria-live="polite" hidden>
+        <h2>Order confirmed</h2>
+        <p>Reference: <strong id="order-id"></strong></p>
+        <p>Total: <strong id="order-total"></strong></p>
+      </section>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+artifacts/
+evidence/**/metrics.json
+evidence/**/METRICS.md
+evidence/**/screenshots/
+evidence/**/videos/
