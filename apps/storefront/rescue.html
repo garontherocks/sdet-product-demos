@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automation Rescue Lab</title>
+    <style>
+      :root {
+        font-family: Inter, system-ui, sans-serif;
+        color: #162033;
+        background: #eef3f8;
+      }
+      body {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 24px;
+      }
+      main {
+        padding: 32px;
+        border-radius: 16px;
+        background: white;
+        box-shadow: 0 8px 26px #16324f18;
+      }
+      button {
+        border: 0;
+        border-radius: 8px;
+        padding: 12px 18px;
+        color: white;
+        background: #087e8b;
+        font-weight: 700;
+      }
+      #status {
+        margin-top: 24px;
+        color: #14734c;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>Controlled test environment</p>
+      <h1>Automation Rescue Lab</h1>
+      <section id="action" aria-label="Checkout action"></section>
+      <p id="status" aria-live="polite"></p>
+    </main>
+    <script>
+      const delay = Number(new URLSearchParams(location.search).get('renderDelay') ?? 20);
+      setTimeout(() => {
+        const button = document.createElement('button');
+        button.textContent = 'Complete checkout';
+        button.addEventListener('click', () => {
+          document.querySelector('#status').textContent = 'Order confirmed';
+        });
+        document.querySelector('#action').append(button);
+      }, delay);
+    </script>
+  </body>
+</html>
