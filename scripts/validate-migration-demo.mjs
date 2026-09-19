@@ -20,8 +20,9 @@ function collect(suite) {
   for (const child of suite.suites ?? []) collect(child);
 }
 for (const suite of report.suites ?? []) collect(suite);
-const executedTitles = specs.flatMap((spec) => spec.tests ?? []).map((item) => item.title);
-const passed = ids.filter((id) => executedTitles.some((title) => title.includes(id))).length;
+const passed = ids.filter((id) =>
+  specs.some((spec) => spec.ok === true && spec.title?.includes(id)),
+).length;
 const direct = manifest.scenarios.filter((item) => item.disposition === 'direct').length;
 const adapted = manifest.scenarios.filter((item) => item.disposition === 'adapt').length;
 const summary = {
