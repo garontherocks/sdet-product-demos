@@ -1,5 +1,7 @@
 artifacts/
 evidence/**/metrics.json
 evidence/**/METRICS.md
+evidence/**/comparison.json
+evidence/**/COMPARISON.md
 evidence/**/screenshots/
 evidence/**/videos/

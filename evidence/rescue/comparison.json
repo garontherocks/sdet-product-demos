@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-09-19T20:27:25.891Z",
+  "product": "Automation Rescue",
+  "syntheticDemo": true,
+  "before": {
+    "label": "before",
+    "repetitions": 5,
+    "passed": 4,
+    "failed": 1,
+    "passRate": 0.8,
+    "flaky": true,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "durationMs": 3327,
+        "reportedDurationMs": 2411.313
+      },
+      {
+        "run": 2,
+        "passed": false,
+        "durationMs": 2001,
+        "reportedDurationMs": 1173.5749999999998
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "durationMs": 1962,
+        "reportedDurationMs": 1146.3670000000002
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "durationMs": 1961,
+        "reportedDurationMs": 1147.922
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "durationMs": 1966,
+        "reportedDurationMs": 1149.181
+      }
+    ]
+  },
+  "after": {
+    "label": "after",
+    "repetitions": 5,
+    "passed": 5,
+    "failed": 0,
+    "passRate": 1,
+    "flaky": false,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "durationMs": 2057,
+        "reportedDurationMs": 1242.473
+      },
+      {
+        "run": 2,
+        "passed": true,
+        "durationMs": 2234,
+        "reportedDurationMs": 1392.7669999999998
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "durationMs": 2055,
+        "reportedDurationMs": 1185.7129999999997
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "durationMs": 2014,
+        "reportedDurationMs": 1154.676
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "durationMs": 2028,
+        "reportedDurationMs": 1165.659
+      }
+    ]
+  },
+  "delta": {
+    "passRatePoints": 19.999999999999996,
+    "failuresRemoved": 1
+  },
+  "boundary": "Controlled demonstration of measurement and remediation; not a customer benchmark."
+}

@@ -1,0 +1,35 @@
+name: Automation Rescue demo
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: rescue-demo-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run quality
+      - run: npm run test:rescue
+      - run: npm run validate:rescue
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: automation-rescue-demo-evidence
+          path: |
+            artifacts/rescue
+            evidence/rescue
+          retention-days: 30

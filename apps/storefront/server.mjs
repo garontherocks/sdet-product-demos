@@ -22,6 +22,10 @@ createServer(async (request, response) => {
     response.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
     return response.end(await readFile(path.join(root, 'index.html')));
   }
+  if (request.url?.startsWith('/rescue.html')) {
+    response.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
+    return response.end(await readFile(path.join(root, 'rescue.html')));
+  }
   if (request.url === '/app.js') {
     response.writeHead(200, { 'content-type': 'text/javascript; charset=utf-8' });
     return response.end(await readFile(path.join(root, 'app.js')));
