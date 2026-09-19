@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-09-19T20:12:23.271Z",
+  "product": "Playwright Automation Bootstrap",
+  "tests": 3,
+  "passed": 3,
+  "failed": 0,
+  "passRate": 1,
+  "durationMs": 573,
+  "browsers": [
+    "chromium"
+  ],
+  "evidence": [
+    "HTML report",
+    "JSON report",
+    "video per test",
+    "success screenshot"
+  ]
+}
