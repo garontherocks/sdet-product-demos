@@ -9,7 +9,7 @@ export default defineConfig({
   reporter: [
     ['line'],
     ['html', { outputFolder: 'artifacts/playwright-report', open: 'never' }],
-    ['json', { outputFile: 'artifacts/results.json' }],
+    ['json', { outputFile: process.env.PLAYWRIGHT_JSON_OUTPUT_NAME ?? 'artifacts/results.json' }],
   ],
   use: {
     baseURL: 'http://127.0.0.1:4173',
