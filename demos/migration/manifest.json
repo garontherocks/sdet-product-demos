@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "sourceFramework": "Cypress",
+  "targetFramework": "Playwright",
+  "scenarios": [
+    {
+      "id": "MIG-001",
+      "name": "Product catalog",
+      "disposition": "direct",
+      "sourcePattern": "cy.visit + cy.get",
+      "targetPattern": "page.goto + role locator"
+    },
+    {
+      "id": "MIG-002",
+      "name": "Checkout with network synchronization",
+      "disposition": "adapt",
+      "sourcePattern": "cy.intercept alias + cy.wait",
+      "targetPattern": "page.waitForResponse"
+    },
+    {
+      "id": "MIG-003",
+      "name": "Products API contract",
+      "disposition": "direct",
+      "sourcePattern": "cy.request",
+      "targetPattern": "APIRequestContext"
+    }
+  ]
+}

@@ -3,5 +3,7 @@ evidence/**/metrics.json
 evidence/**/METRICS.md
 evidence/**/comparison.json
 evidence/**/COMPARISON.md
+evidence/**/summary.json
+evidence/**/SUMMARY.md
 evidence/**/screenshots/
 evidence/**/videos/

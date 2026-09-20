@@ -34,3 +34,14 @@ npm run validate:rescue
 ```
 
 The 80% → 100% pass-rate change is a deterministic demonstration of the measurement workflow, not a customer benchmark.
+
+## Playwright Migration Toolkit
+
+The third demo maps three named Cypress scenarios to Playwright, validates source-to-target traceability and executes the destination suite.
+
+```bash
+npm run test:migration
+npm run validate:migration
+```
+
+The generated evidence reports mapping counts, execution status and coverage parity for the declared sanitized sample only.
